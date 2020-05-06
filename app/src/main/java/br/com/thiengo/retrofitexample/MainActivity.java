@@ -2,10 +2,11 @@ package br.com.thiengo.retrofitexample;
 
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.util.Log;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        Log.d("mensagem: " , "passei" );
 
         Gson gson = new GsonBuilder().registerTypeAdapter(Car.class, new CarDes()).create();
 
